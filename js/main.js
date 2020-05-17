@@ -40,3 +40,53 @@ timeline
         }
 
     );
+
+// const playButton = document.querySelector('#btnPlay');
+const playButton = document.getElementById('btnPlay');
+const btnPause = document.getElementById('btnPause');
+const btnResume = document.getElementById('btnResume');
+const btnReverse = document.getElementById('btnReverse');
+const btnSpeedUp = document.getElementById('btnSpeedUp');
+const btnSlowDown = document.getElementById('btnSlowDown');
+const btnSeek = document.getElementById('btnSeek');
+const btnProgress = document.getElementById('btnProgress');
+const btnRestart = document.getElementById('btnRestart');
+
+playButton.addEventListener('click', () => {
+    timeline.play();
+});
+
+btnPause.addEventListener('click', () => {
+    timeline.pause();
+});
+
+btnResume.addEventListener('click', () => {
+    timeline.resume();
+});
+
+btnReverse.addEventListener('click', () => {
+    timeline.reverse();
+});
+
+btnSpeedUp.addEventListener('click', () => {
+    timeline.timeScale(2);
+});
+
+btnSlowDown.addEventListener('click', () => {
+    timeline.timeScale(0.5);
+});
+
+console.log(timeline.duration());
+btnSeek.addEventListener('click', () => {
+    timeline.seek(1);
+});
+
+btnProgress.addEventListener('click', () => {
+    timeline.progress(0.5);
+});
+
+btnRestart.addEventListener('click', () => {
+    timeline.restart();
+});
+
+
